@@ -1,4 +1,4 @@
-#include "Stack1.h";
+#include "Stack.h";
 #include "List.h";
 #include "nodo.h";
 #pragma once
@@ -20,12 +20,7 @@ namespace Tarea3FranciscoPuga1183819 {
 	public:
 		List* miList;
 		List* miList2;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::ListBox^ ListaCartas;
-	public:
-
-	private: System::Windows::Forms::Label^ label10;
-		   Stack1* stackg1;
+		
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -99,15 +94,12 @@ namespace Tarea3FranciscoPuga1183819 {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->ListaCartas = (gcnew System::Windows::Forms::ListBox());
-			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// listBox1
 			// 
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->Location = System::Drawing::Point(172, 143);
+			this->listBox1->Location = System::Drawing::Point(112, 143);
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(47, 212);
 			this->listBox1->TabIndex = 0;
@@ -115,7 +107,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// listBox2
 			// 
 			this->listBox2->FormattingEnabled = true;
-			this->listBox2->Location = System::Drawing::Point(225, 143);
+			this->listBox2->Location = System::Drawing::Point(165, 143);
 			this->listBox2->Name = L"listBox2";
 			this->listBox2->Size = System::Drawing::Size(47, 212);
 			this->listBox2->TabIndex = 1;
@@ -123,7 +115,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// listBox3
 			// 
 			this->listBox3->FormattingEnabled = true;
-			this->listBox3->Location = System::Drawing::Point(278, 143);
+			this->listBox3->Location = System::Drawing::Point(218, 143);
 			this->listBox3->Name = L"listBox3";
 			this->listBox3->Size = System::Drawing::Size(47, 212);
 			this->listBox3->TabIndex = 2;
@@ -131,7 +123,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// listBox4
 			// 
 			this->listBox4->FormattingEnabled = true;
-			this->listBox4->Location = System::Drawing::Point(331, 143);
+			this->listBox4->Location = System::Drawing::Point(271, 143);
 			this->listBox4->Name = L"listBox4";
 			this->listBox4->Size = System::Drawing::Size(47, 212);
 			this->listBox4->TabIndex = 3;
@@ -139,7 +131,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// listBox5
 			// 
 			this->listBox5->FormattingEnabled = true;
-			this->listBox5->Location = System::Drawing::Point(384, 143);
+			this->listBox5->Location = System::Drawing::Point(324, 143);
 			this->listBox5->Name = L"listBox5";
 			this->listBox5->Size = System::Drawing::Size(47, 212);
 			this->listBox5->TabIndex = 4;
@@ -147,7 +139,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// listBox6
 			// 
 			this->listBox6->FormattingEnabled = true;
-			this->listBox6->Location = System::Drawing::Point(437, 143);
+			this->listBox6->Location = System::Drawing::Point(377, 143);
 			this->listBox6->Name = L"listBox6";
 			this->listBox6->Size = System::Drawing::Size(47, 212);
 			this->listBox6->TabIndex = 5;
@@ -155,7 +147,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// listBox7
 			// 
 			this->listBox7->FormattingEnabled = true;
-			this->listBox7->Location = System::Drawing::Point(490, 143);
+			this->listBox7->Location = System::Drawing::Point(430, 143);
 			this->listBox7->Name = L"listBox7";
 			this->listBox7->Size = System::Drawing::Size(47, 212);
 			this->listBox7->TabIndex = 6;
@@ -170,7 +162,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(225, 77);
+			this->textBox1->Location = System::Drawing::Point(165, 77);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
 			this->textBox1->Size = System::Drawing::Size(47, 20);
@@ -179,7 +171,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(169, 80);
+			this->label1->Location = System::Drawing::Point(109, 80);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(36, 13);
 			this->label1->TabIndex = 9;
@@ -188,7 +180,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(169, 127);
+			this->label2->Location = System::Drawing::Point(109, 127);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(24, 13);
 			this->label2->TabIndex = 10;
@@ -197,7 +189,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(222, 127);
+			this->label3->Location = System::Drawing::Point(162, 127);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(24, 13);
 			this->label3->TabIndex = 11;
@@ -206,7 +198,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(275, 127);
+			this->label4->Location = System::Drawing::Point(215, 127);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(24, 13);
 			this->label4->TabIndex = 12;
@@ -215,7 +207,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(328, 127);
+			this->label5->Location = System::Drawing::Point(268, 127);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(24, 13);
 			this->label5->TabIndex = 13;
@@ -224,7 +216,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(381, 127);
+			this->label6->Location = System::Drawing::Point(321, 127);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(24, 13);
 			this->label6->TabIndex = 14;
@@ -233,7 +225,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(434, 127);
+			this->label7->Location = System::Drawing::Point(374, 127);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(24, 13);
 			this->label7->TabIndex = 15;
@@ -242,7 +234,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(490, 127);
+			this->label8->Location = System::Drawing::Point(430, 127);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(24, 13);
 			this->label8->TabIndex = 16;
@@ -257,40 +249,11 @@ namespace Tarea3FranciscoPuga1183819 {
 			this->label9->TabIndex = 17;
 			this->label9->Text = L"Mano:";
 			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(12, 21);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 18;
-			this->button1->Text = L"Iniciar";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// ListaCartas
-			// 
-			this->ListaCartas->FormattingEnabled = true;
-			this->ListaCartas->Location = System::Drawing::Point(12, 97);
-			this->ListaCartas->Name = L"ListaCartas";
-			this->ListaCartas->Size = System::Drawing::Size(47, 329);
-			this->ListaCartas->TabIndex = 19;
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(9, 80);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(79, 13);
-			this->label10->TabIndex = 20;
-			this->label10->Text = L"Lista de cartas:";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(716, 503);
-			this->Controls->Add(this->label10);
-			this->Controls->Add(this->ListaCartas);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
@@ -317,8 +280,7 @@ namespace Tarea3FranciscoPuga1183819 {
 
 		}
 #pragma endregion
-	public: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }
