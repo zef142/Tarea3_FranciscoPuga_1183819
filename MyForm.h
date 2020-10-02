@@ -51,6 +51,8 @@ namespace Tarea3FranciscoPuga1183819 {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::ListBox^ listBox8;
+	private: System::Windows::Forms::Label^ label9;
 
 	private:
 		/// <summary>
@@ -81,6 +83,8 @@ namespace Tarea3FranciscoPuga1183819 {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->listBox8 = (gcnew System::Windows::Forms::ListBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// listBox1
@@ -204,6 +208,7 @@ namespace Tarea3FranciscoPuga1183819 {
 			// 
 			// textBox1
 			// 
+			this->textBox1->Enabled = false;
 			this->textBox1->Location = System::Drawing::Point(297, 92);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(44, 20);
@@ -218,11 +223,30 @@ namespace Tarea3FranciscoPuga1183819 {
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"Mazo:";
 			// 
+			// listBox8
+			// 
+			this->listBox8->FormattingEnabled = true;
+			this->listBox8->Location = System::Drawing::Point(707, 159);
+			this->listBox8->Name = L"listBox8";
+			this->listBox8->Size = System::Drawing::Size(44, 199);
+			this->listBox8->TabIndex = 16;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(704, 143);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(37, 13);
+			this->label9->TabIndex = 17;
+			this->label9->Text = L"Mano:";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(895, 495);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->listBox8);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label7);
@@ -239,7 +263,6 @@ namespace Tarea3FranciscoPuga1183819 {
 			this->Controls->Add(this->listBox3);
 			this->Controls->Add(this->listBox2);
 			this->Controls->Add(this->listBox1);
-			this->Enabled = false;
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
