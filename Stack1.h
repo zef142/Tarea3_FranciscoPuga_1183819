@@ -1,13 +1,12 @@
-#include "List.h";
+#include "List.h"
 #pragma once
-class Stack
+class Stack1
 {
+private: List* internalList;
 public:
-	Stack();
+	Stack1();
 	nodo* Peek();
 	void Insert(int value);
 	bool isEmpty();
-private: 
-	List* internalList;
 };
 
