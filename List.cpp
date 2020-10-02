@@ -65,3 +65,20 @@ nodo* List::GetNode(int value) {
 	}
 	return temp;
 }
+
+int List::GetValue(int position) {
+	if ((position >= 0) && (position < count)) {
+		nodo* temp = start;
+		int index = 0;
+		while ((temp) && (index < position)) {
+			temp = temp->next;
+			index++;
+		}
+		return temp->value;
+	}
+	return -1;
+}
+
+bool List::isEmpty() {
+	return count == 0;
+}
