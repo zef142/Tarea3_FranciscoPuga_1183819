@@ -1,6 +1,8 @@
-#include "Stack.h";
+#include "Stack1.h";
 #include "List.h";
 #include "nodo.h";
+#include "string";
+#include "iostream";
 #pragma once
 
 namespace Tarea3FranciscoPuga1183819 {
@@ -18,18 +20,36 @@ namespace Tarea3FranciscoPuga1183819 {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
+
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::ListBox^ listBox9;
+	public:
+
 		List* miList;
-		List* miList2;
-		
+
+		Stack1* Stackg1;
+		Stack1* Stackg2;
+		Stack1* Stackg3;
+		Stack1* Stackg4;
+		Stack1* Stackg5;
+		Stack1* Stackg6;
+		Stack1* Stackg7;
 		MyForm(void)
 		{
 			InitializeComponent();
+			
 			miList = new List();
 			miList->count = 0;
 			miList->start = nullptr;
 			miList->end = nullptr;
 
-			miList2 = new List();
+			Stackg1 = new Stack1();
+			Stackg2 = new Stack1();
+			Stackg3 = new Stack1();
+			Stackg4 = new Stack1();
+			Stackg5 = new Stack1();
+			Stackg6 = new Stack1();
+			Stackg7 = new Stack1();
 		}
 
 	protected:
@@ -94,6 +114,8 @@ namespace Tarea3FranciscoPuga1183819 {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->listBox9 = (gcnew System::Windows::Forms::ListBox());
 			this->SuspendLayout();
 			// 
 			// listBox1
@@ -249,11 +271,31 @@ namespace Tarea3FranciscoPuga1183819 {
 			this->label9->TabIndex = 17;
 			this->label9->Text = L"Mano:";
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(13, 13);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 18;
+			this->button1->Text = L"Start";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// listBox9
+			// 
+			this->listBox9->FormattingEnabled = true;
+			this->listBox9->Location = System::Drawing::Point(13, 42);
+			this->listBox9->Name = L"listBox9";
+			this->listBox9->Size = System::Drawing::Size(47, 680);
+			this->listBox9->TabIndex = 19;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(716, 503);
+			this->ClientSize = System::Drawing::Size(716, 781);
+			this->Controls->Add(this->listBox9);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
@@ -281,6 +323,61 @@ namespace Tarea3FranciscoPuga1183819 {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		listBox9->Items->Add("R1");
+		listBox9->Items->Add("R2");
+		listBox9->Items->Add("R3");
+		listBox9->Items->Add("R4");
+		listBox9->Items->Add("R5");
+		listBox9->Items->Add("R6");
+		listBox9->Items->Add("R7");
+		listBox9->Items->Add("R8");
+		listBox9->Items->Add("R9");
+		listBox9->Items->Add("R10");
+		listBox9->Items->Add("R11");
+		listBox9->Items->Add("R12");
+		listBox9->Items->Add("R13");
+		listBox9->Items->Add("R1");
+		listBox9->Items->Add("R2");
+		listBox9->Items->Add("R3");
+		listBox9->Items->Add("R4");
+		listBox9->Items->Add("R5");
+		listBox9->Items->Add("R6");
+		listBox9->Items->Add("R7");
+		listBox9->Items->Add("R8");
+		listBox9->Items->Add("R9");
+		listBox9->Items->Add("R10");
+		listBox9->Items->Add("R11");
+		listBox9->Items->Add("R12");
+		listBox9->Items->Add("R13");
+		listBox9->Items->Add("N1");
+		listBox9->Items->Add("N2");
+		listBox9->Items->Add("N3");
+		listBox9->Items->Add("N4");
+		listBox9->Items->Add("N5");
+		listBox9->Items->Add("N6");
+		listBox9->Items->Add("N7");
+		listBox9->Items->Add("N8");
+		listBox9->Items->Add("N9");
+		listBox9->Items->Add("N10");
+		listBox9->Items->Add("N11");
+		listBox9->Items->Add("N12");
+		listBox9->Items->Add("N13");
+		listBox9->Items->Add("N1");
+		listBox9->Items->Add("N2");
+		listBox9->Items->Add("N3");
+		listBox9->Items->Add("N4");
+		listBox9->Items->Add("N5");
+		listBox9->Items->Add("N6");
+		listBox9->Items->Add("N7");
+		listBox9->Items->Add("N8");
+		listBox9->Items->Add("N9");
+		listBox9->Items->Add("N10");
+		listBox9->Items->Add("N11");
+		listBox9->Items->Add("N12");
+		listBox9->Items->Add("N13");
 	}
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+};
 }
