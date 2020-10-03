@@ -3,6 +3,7 @@
 #include "nodo.h";
 #include "string";
 #include "iostream";
+#include <time.h>
 #pragma once
 
 namespace Tarea3FranciscoPuga1183819 {
@@ -377,7 +378,8 @@ namespace Tarea3FranciscoPuga1183819 {
 		listBox9->Items->Add("N13");
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		srand(time(NULL));
+		int rando = rand() % 51;
 	}
 };
 }
